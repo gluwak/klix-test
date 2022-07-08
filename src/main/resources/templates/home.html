@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+</head>
+
+<body>
+<div class="loading">
+    <img th:src="@{/img/loading.gif}" width="100" height="100">
+</div>
+<div class="form-panel">
+    <form action="/application" style="">
+        <div class="phoneErr"><label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"></div>
+        <br><br>
+        <div class="emailErr"><label for="email">Email:</label>
+            <input type="email" id="email" name="email"></div>
+        <br><br>
+        <div class="monthlyIncomeErr"><label for="monthlyIncome">Monthly income:</label>
+            <input type="text" id="monthlyIncome" name="monthlyIncome"></div>
+        <br><br>
+        <div class="monthlyExpensesErr"><label for="monthlyExpenses">Monthly expenses (without credit liabilities):</label>
+            <input type="text" id="monthlyExpenses" name="monthlyExpenses"></div>
+        <br><br>
+        <div class="monthlyCreditLiabilitiesErr"><label for="monthlyCreditLiabilities">Monthly credit liabilities:</label>
+            <input type="text" id="monthlyCreditLiabilities" name="monthlyCreditLiabilities"></div>
+        <br><br>
+        <div class="dependentsErr"><label for="dependents">Dependents:</label>
+            <input type="text" id="dependents" name="dependents"></div>
+        <br><br>
+        <div class="maritalStatusErr"><label for="maritalStatus">Marital status:</label>
+            <select name="maritalStatus" id="maritalStatus">
+                <option value="SINGLE">Single</option>
+                <option value="MARRIED">Married</option>
+                <option value="DIVORCED">Divorced</option>
+                <option value="COHABITING">Cohabiting</option>
+            </select></div>
+        <br><br>
+        <div class="amountErr"><label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount"></div>
+        <br><br>
+        <div class="agreeToBeScoredErr"><label for="agreeToBeScored">Agree to be scored:</label>
+            <input type="checkbox" id="agreeToBeScored" name="agreeToBeScored"></div>
+        <br><br>
+        <div class="agreeToDataSharingErr"><label for="agreeToDataSharing">Agree to data sharing:</label>
+            <input type="checkbox" id="agreeToDataSharing" name="agreeToDataSharing"></div>
+        <br><br>
+    </form>
+
+    <input type="submit" value="submit" onclick="sendApplication()"/>
+</div>
+<script th:src="@{/js/script.js}" type="text/javascript"></script>
+</body>
+
+</html>

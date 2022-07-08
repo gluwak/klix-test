@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.7.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.7.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '2.7.0'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
